@@ -13,7 +13,10 @@ import firm11 from '../../assets/images/the-adam-poster.jpeg';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-
+// type dataSlide = {
+//     id: string;
+//     posterImage: string;
+// }
 export default function FirmSlide() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const Listfirms = [
@@ -72,10 +75,9 @@ export default function FirmSlide() {
             setCurrentIndex((currentIndex - 1));
         }
     }
-    console.log("length array: ", Listfirms.length);
     return (
         <div className='relative w-full flex flex-col justify-center items-center'>
-        <div className="flex flex-row items-center w-full h-60 bg-slate-400 bg-slate-400 transform transition-transform duration-1000 ">    
+        <div className="flex flex-row gap-7 items-center w-full h-60 transform transition-transform duration-1000 ">    
             {Listfirms.slice(currentIndex, currentIndex + 7).map((firm) => (
                 <div key={firm.id} className="w-full h-full bg-slate-400 hover:scale-125">
                     <Image src={firm.posterImage} alt="poster" className='w-full h-full '/>

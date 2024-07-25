@@ -9,7 +9,7 @@ export default function Header() {
         <div>
             <Image className='w-full h-screen' src={banner} alt="banner" />
         </div>
-        <div className='absolute bottom-0 left-0 right-0'>
+        <div className='absolute bottom-0 left-0 right-0 bg-transparent'>
             <FirmSlide />
         </div>
     </div>
